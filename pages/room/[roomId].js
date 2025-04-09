@@ -17,7 +17,7 @@ export default function Room() {
   useEffect(() => {
     if (!roomId) return;
 
-    socketRef.current = io('http://localhost:5000');
+    socketRef.current = io('https://vc-meeting-api.onrender.com');
     peerRef.current = new Peer();
 
     navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(stream => {
